@@ -1,0 +1,26 @@
+{
+  "name": "nailong-test",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "《奶龙测试》（The Naiwa / Nailong Test）— 跨越人类 6,000 年 20 种艺术媒介的 9:16 纯代码生成骑行动画短片（p5.js + WebGL + p5.brush + Web Audio）",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "preview": "python3 -m http.server 8080",
+    "verify": "node build_video.mjs --verify",
+    "render": "node build_video.mjs --render"
+  },
+  "keywords": [
+    "generative-art",
+    "p5js",
+    "webgl",
+    "procedural-animation",
+    "web-audio",
+    "art-history",
+    "nailong",
+    "pelican-test"
+  ]
+}

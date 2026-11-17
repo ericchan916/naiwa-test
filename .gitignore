@@ -1,0 +1,13 @@
+# Build & headless Chrome render outputs
+out/
+*.mp4
+
+# Legacy local prototype archive
+_legacy_16x9/
+
+# OS & editor metadata
+.DS_Store
+._*
+Thumbs.db
+*.log
+node_modules/
