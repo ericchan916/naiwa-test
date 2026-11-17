@@ -1,43 +1,68 @@
 # 《奶蛙测试》(`The Naiwa Test`)
 
-> **跨越人类 6,000 年、20 种艺术史媒介的 `9:16` 竖屏高清（`1080×1920 @ 30fps`）纯代码生成动画短片**  
-> 基于 [`orbitoo/pelican-test`](https://github.com/orbitoo/pelican-test)（MIT）美术馆级程序化卷轴与 Web Audio 引擎深度重制 · `@Nonstop × ERC` 出品
-
+[![微信视频号](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E8%A7%86%E9%A2%91%E5%8F%B7-%E5%8E%BB%E7%9C%8B%E6%88%90%E7%89%87-07c160.svg)](https://weixin.qq.com/sph/An74vZLV3b)
+[![抖音 Douyin](https://img.shields.io/badge/%E6%8A%96%E9%9F%B3%20Douyin-%E5%8E%BB%E7%9C%8B%E6%88%90%E7%89%87-fe2c55.svg)](https://v.douyin.com/jFsSveywc4A)
 [![License: MIT](https://img.shields.io/badge/License-MIT-amber.svg)](./LICENSE)
-[![Resolution](https://img.shields.io/badge/Resolution-1080x1920%20%289%3A16%29-38bdf8.svg)](#快速运行与离线渲染)
-[![Zero NPM Deps](https://img.shields.io/badge/Dependencies-Zero%20NPM-4ade80.svg)](#工程架构)
-[![微信视频号](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E8%A7%86%E9%A2%91%E5%8F%B7-%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B-07c160.svg)](https://weixin.qq.com/sph/An74vZLV3b)
-[![抖音 Douyin](https://img.shields.io/badge/%E6%8A%96%E9%9F%B3%20Douyin-%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B-fe2c55.svg)](https://v.douyin.com/jFsSveywc4A)
+[![9:16 Vertical](https://img.shields.io/badge/Canvas-1080x1920-38bdf8.svg)](#自己跑起来看看)
+
+AI 圈里有个老梗叫「画一只骑自行车的鹈鹕」，用来测大模型写 SVG 的本事。后来 Elbert 把这个梗做成了纯代码动画 [`pelican-test`](https://github.com/orbitoo/pelican-test)。
+
+我看完手痒，把鹈鹕请下了车，换上这只眼神呆滞、挺着大圆肚子的**奶蛙**，顺手把整个画廊重构成适合手机刷的 `9:16` 竖屏，让它一口气蹬车穿过人类 6,000 年的 20 道画框。
+
+仓库里只开源全部源码和高清剧照，不提供 MP4 下载。想看带 120BPM 卡点配乐和原版笑声的完整成片，直接去抖音或视频号看就行（顺手点个赞就更妙了）：
+
+- 抖音：https://v.douyin.com/jFsSveywc4A
+- 微信视频号：https://weixin.qq.com/sph/An74vZLV3b
 
 ![20 个艺术史时代总览拼图](./screenshots/hero_20_eras_grid.png)
 
-> **在线观看与高清原片下载**
-> - **微信视频号**：https://weixin.qq.com/sph/An74vZLV3b
-> - **抖音（Douyin）**：https://v.douyin.com/jFsSveywc4A
-> - **高清原片 MP4 下载**：完整的 `1080×1920`（`30fps`、`48kHz` 立体声混音、`91.33s`）成片可直接前往仓库右侧 **[Releases (`v1.0.0`)](../../releases/latest)** 下载。
+---
+
+## 里面藏了些什么活儿
+
+最省事的做法当然是抠一张奶蛙贴图，在 20 张背景上从左移到右。但那样一眼假，也没劲。所以这 91 秒里，奶蛙每闯进一个年代，浑身上下都跟着那个年代的画具重画了一遍。
+
+到了北宋《溪山行旅图》（`#05`），巨峰底下的木栈道窄得像根线。把镜头推近 `2.75` 倍（底层专门按 `3000×3000` 超采样重绘，不然放大必糊），才能在山脚逮到背着竹编小斗笠的奶蛙。它身上的焦墨折线和淡赭藤黄，跟前后两头受惊的小毛驴是同一管毛笔画出来的。
+
+进了现代艺术就彻底放飞了。梵高《星月夜》（`#12`）里，圆肚皮顺着曲率铺满刮刀厚涂油彩，蛙眼特意压成暗橄榄绿，免得在油画里像贴上去的塑料片。到了蒙克《呐喊》（`#13`），整只蛙被桥上的声波拧成干粉彩条带，平时的死鱼嘴也张成了那个标志性的竖椭圆「O」。
+
+千禧年之后塞了不少私货：`#17` 的老聊天窗口弹出来会轻轻晃一下（特意收住了幅度，不晕人），奶蛙就在底下的画图板里闷头蹬车；`#19` 直接切进 `@Nonstop` 的滨海跟拍视角，热搜词条、错层弹幕和右下角转动的蓝底 `P` 字黑胶都在。
+
+最后镜头拉远成一面 `3×7` 的展墙，墙上 20 幅画里的奶蛙全都在各自画框里继续骑车。紧接着镜头推向右下角第 21 格的新闻发布会：面对七支话筒，绷了六千年的奶蛙本人终于没忍住，拍着大肚皮笑出了原声。
+
+全片左上角的 `@Nonstop × ERC` 水印也跟着换了 22 套衣服。古埃及里它是双股金绳捆扎的王名圈，汉画像石里带刀凿崩边，唐宋卷轴里是残边朱文印，1950 年代变成示波器金属面板上的绿光电子束，最后一幕直接长在了代码编辑器的标题栏里。
 
 ---
 
-## 项目亮点
+## 1:1 局部放大看看笔触
 
-1. **主角全媒介原生重绘（`奶蛙` + 解析双骨逆运动学骑行骨架）**
-   - 并非简单贴图替换，而是针对 20 个艺术时代各自采用对应的**物理媒介与笔触算法**重绘奶蛙与单车：北宋范宽焦墨铁线折芦描与淡赭藤黄染绢、梵高《星月夜》`source-atop` 厚涂刮刀油彩肌理、蒙克《呐喊》抽象表现派干粉彩起伏条带与竖椭圆 `"O"` 形呐喊嘴、爪哇牛皮镂空皮影关节铆钉、1950s 示波器 P1 荧光绿电子束、红白机 8-bit 像素精灵以及 2020s 36 阶复数傅里叶本轮（`Σ c_k · e^{ikωθ}`）实时绘线。
-2. **全片背景持续物理动态 + `9:16` 竖屏长廊重构**
-   - 将原版横屏重构为 `1080×1920` 竖屏博物馆长廊视口，并为全部 20 个时代注入连续环境动态（北宋 `3000×3000` `3×` 超采样山谷推镜、清明上河图虹桥车马汴河波光、浮世绘飞沫、星空漩涡流场、VHS 磁带抖动与竖屏短视频实时跟拍弹幕）。
-3. **片尾 `3×7` 博物馆展墙 20 幅画作实时骑行 + 第 21 格「捧腹大笑」发布会**
-   - 镜头拉远至 `3×7` 竖屏展墙时，`#01–#20` 全部 **20 幅画作逐帧实时渲染蹬车前进**；随后推镜至第 21 格新闻发布会，呈现去绿幕溢色精修的奶蛙「捧腹大笑」动画与原版笑声混音。
-4. **22 种跨时代原生风格化 `@Nonstop × ERC` 品牌印记**
-   - 从古埃及双股金绳王名圈、东汉刀凿石刻拓印、唐宋铁笔残边朱文鉴藏印、玛雅树皮纸石雕铭文块，到蒸汽波双层霓虹灯牌与 IDE 顶栏发光内联标识，随时代媒介同步演化。
+| #05 宋代山水：和栈道小毛驴一个画风的铁线描奶蛙 | #12 梵高《星月夜》：顺着圆肚铺的厚涂油彩与橄榄绿蛙眼 | #13 蒙克《呐喊》：干粉彩扭曲条带、漩涡肚皮与「O」嘴 |
+| :---: | :---: | :---: |
+| ![Song Detail](./screenshots/details/detail_05_song_calligraphic_naiwa.png) | ![Starry Detail](./screenshots/details/detail_12_starry_impasto.png) | ![Scream Detail](./screenshots/details/detail_13_scream_expressionist.png) |
+
+| #07 玛雅抄本：树皮纸线描与石雕铭文块 | #15 示波器：黄铜铭牌与金属副板上的荧光束 | #18 蒸汽波：双层霓虹灯牌与老录像机 OSD |
+| :---: | :---: | :---: |
+| ![Maya Detail](./screenshots/details/detail_07_maya_codex.png) | ![Oscilloscope Detail](./screenshots/details/detail_15_oscilloscope_crt.png) | ![Vaporwave Detail](./screenshots/details/detail_18_vaporwave_neon.png) |
+
+| #19 短视频：热搜词条、错层弹幕与蓝底 P 头像 | #19 短视频：`@Nonstop` 账号与黑胶唱片中心标 | #20 代码美学：直接长在 IDE 标题栏里的发光标识 |
+| :---: | :---: | :---: |
+| ![ShortVideo Top](./screenshots/details/detail_19_shortvideo_top.png) | ![ShortVideo Bottom](./screenshots/details/detail_19_shortvideo_bottom.png) | ![Code Header](./screenshots/details/detail_20_code_ide_header.png) |
+
+### 跟着年代变装的 `@Nonstop × ERC`
+
+| 古埃及双股金绳王名圈 | 东汉刀凿崩边石刻拓印 | 盛唐铁笔朱文残印 | 1985 红白机整数像素块 |
+| :---: | :---: | :---: | :---: |
+| ![Egypt Watermark](./screenshots/details/detail_watermark_egypt_cartouche.png) | ![Han Watermark](./screenshots/details/detail_watermark_han_rubbing.png) | ![Tang Watermark](./screenshots/details/detail_watermark_tang_seal.png) | ![8bit Watermark](./screenshots/details/detail_watermark_8bit_pixel.png) |
 
 ---
 
-## 全片 22 幕高清关键帧画廊（`1080×1920`）
+## 全片 22 幕竖屏剧照（`1080×1920`）
 
-| 片头 · 古籍手稿摹本 | #01 · 撒哈拉岩画（约前 4000） | #02 · 古埃及壁画（约前 1300） | #03 · 东汉画像石拓片（约 100） |
+| 片头 · 古籍摹本底稿 | #01 · 撒哈拉岩画（约前 4000） | #02 · 古埃及壁画（约前 1300） | #03 · 汉画像石拓片（约 100） |
 | :---: | :---: | :---: | :---: |
 | ![Intro](./screenshots/eras/00_intro_3.5s.png) | ![#01 Sahara](./screenshots/eras/01_sahara_cave_8.0s.png) | ![#02 Egypt](./screenshots/eras/02_egypt_cartouche_13.8s.png) | ![#03 Han](./screenshots/eras/03_han_rubbing_20.0s.png) |
 
-| #04 · 盛唐白描（约 750） | #05 · 北宋巨碑山水（约 1000） | #06 · 清明上河图（约 1120） | #07 · 玛雅抄本（约 1200） |
+| #04 · 唐代白描（约 750） | #05 · 宋代山水（约 1000） | #06 · 清明上河图（约 1120） | #07 · 玛雅抄本（约 1200） |
 | :---: | :---: | :---: | :---: |
 | ![#04 Tang](./screenshots/eras/04_tang_apsaras_26.2s.png) | ![#05 Song](./screenshots/eras/05_song_macro_zoom_31.8s.png) | ![#06 Qingming](./screenshots/eras/06_qingming_bridge_38.0s.png) | ![#07 Maya](./screenshots/eras/07_maya_codex_44.0s.png) |
 
@@ -53,83 +78,56 @@
 | :---: | :---: | :---: | :---: |
 | ![#16 8bit](./screenshots/eras/16_8bit_famicom_98.0s.png) | ![#17 Win2000](./screenshots/eras/17_win2000_chat_104.0s.png) | ![#18 Vaporwave](./screenshots/eras/18_vaporwave_neon_110.0s.png) | ![#19 ShortVideo](./screenshots/eras/19_shortvideo_fullscreen_116.0s.png) |
 
-| #20 · 代码美学（2020s） | 片尾 · 3×7 全墙 20 格实时骑行 | 片尾 · 奶蛙本人捧腹大笑发布会 | 片尾 · 走廊掠影摇铃收尾 |
+| #20 · 代码美学（2020s） | 片尾 · 3×7 全墙 20 格同时骑车 | 片尾 · 第 21 格奶蛙本人笑场 | 片尾 · 走廊一闪而过的车铃 |
 | :---: | :---: | :---: | :---: |
 | ![#20 Code](./screenshots/eras/20_code_art_121.5s.png) | ![Outro Wall](./screenshots/eras/21a_outro_3x7_wall_127.5s.png) | ![Press Laugh](./screenshots/eras/21b_press_belly_laugh_132.2s.png) | ![Corridor Bell](./screenshots/eras/21c_press_corridor_bell_136.02s.png) |
 
 ---
 
-## 1:1 像素级细节与跨媒介工艺特写
+## 自己跑起来看看
 
-| #05 北宋范宽铁线描淡赭藤黄奶蛙（与栈道驮驴同画风） | #12 梵高《星月夜》厚涂油画笔触与柔和橄榄油彩蛙眼 | #13 蒙克《呐喊》抽象表现派干粉彩条带与漩涡肚皮 |
-| :---: | :---: | :---: |
-| ![Song Detail](./screenshots/details/detail_05_song_calligraphic_naiwa.png) | ![Starry Detail](./screenshots/details/detail_12_starry_impasto.png) | ![Scream Detail](./screenshots/details/detail_13_scream_expressionist.png) |
-
-| #07 玛雅抄本树皮纸线描与石雕铭文块 | #15 示波器黄铜铭牌与金属副板荧光束 | #18 蒸汽波高对比双层霓虹灯牌与 VCR OSD |
-| :---: | :---: | :---: |
-| ![Maya Detail](./screenshots/details/detail_07_maya_codex.png) | ![Oscilloscope Detail](./screenshots/details/detail_15_oscilloscope_crt.png) | ![Vaporwave Detail](./screenshots/details/detail_18_vaporwave_neon.png) |
-
-| #19 短视频热搜胶囊、零重叠弹幕与蓝底 P 头像 | #19 短视频 `@Nonstop` 账号与旋转黑胶中心标 | #20 代码美学 IDE 原生标题栏内联品牌标识 |
-| :---: | :---: | :---: |
-| ![ShortVideo Top](./screenshots/details/detail_19_shortvideo_top.png) | ![ShortVideo Bottom](./screenshots/details/detail_19_shortvideo_bottom.png) | ![Code Header](./screenshots/details/detail_20_code_ide_header.png) |
-
-### 跨时代 `@Nonstop × ERC` 原生媒介印记特写
-
-| 古埃及双股金绳王名圈 | 东汉刀凿崩边石刻拓印 | 盛唐古法铁笔朱文残印 | 1985 红白机真整数像素精灵 |
-| :---: | :---: | :---: | :---: |
-| ![Egypt Watermark](./screenshots/details/detail_watermark_egypt_cartouche.png) | ![Han Watermark](./screenshots/details/detail_watermark_han_rubbing.png) | ![Tang Watermark](./screenshots/details/detail_watermark_tang_seal.png) | ![8bit Watermark](./screenshots/details/detail_watermark_8bit_pixel.png) |
-
----
-
-## 快速运行与离线渲染
-
-本项目为 **零 NPM 依赖** 纯原生 ES Modules 工程：
-
-### 1. 浏览器实时交互预览（支持进度拖拽、跳幕、全屏与 120BPM 实时合成音轨）
+整个项目**零 NPM 依赖**，连 `npm install` 都省了。克隆下来起个本地静态服务就能在浏览器里实时跑（带进度条拖拽、跳幕和 Web Audio 实时合成配乐）：
 
 ```bash
+git clone https://github.com/ericchan916/naiwa-test.git
+cd naiwa-test
 python3 -m http.server 8080
 ```
 
-随后在浏览器打开 `http://127.0.0.1:8080` 即可实时播放。
+浏览器打开 `http://127.0.0.1:8080`，按空格键发车。
 
-### 2. 无头 WebGL 关键帧自检与完整 `1080×1920 @ 30fps` MP4 离线渲染
-
-需本机安装 Google Chrome 与 `ffmpeg`（Node.js `>= 22` 原生内置 WebSocket CDP 驱动，无需 `npm install`）：
+如果你想自己跑一遍关键帧校验或者本地离线渲染（需要本机装有 Chrome、`ffmpeg` 和 Node.js `>= 22`）：
 
 ```bash
-# 渲染 26 张 1080×1920 关键帧并校验零报错（输出至 out/keyframes/）
-node build_video.mjs --verify
-
-# 启动 6 个并行无头 WebGL Worker 渲染完整 2,740 帧并合成 48kHz 立体声 MP4
-node build_video.mjs --render
+node build_video.mjs --verify   # 跑一遍 26 张关键帧自检
+node build_video.mjs --render   # 本地 6 路并发渲染完整视频
 ```
 
 ---
 
-## 工程架构
+## 目录说明
 
 ```text
 .
-├── index.html                  # 实时交互预览入口（含音轨控制、时代跳转与全屏舞台）
-├── render.html                 # 无头 Chrome 确定性逐帧离线导出入口
-├── build_video.mjs             # 零依赖 CDP 多进程并行渲染器 + 48kHz 音轨混音合成脚本
-├── assets/panels/              # 时代辅助底纹、精抠大笑序列帧、原版笑声与品牌标识素材
-├── public/                     # 本地完整中英文字体（NotoSerifSC / LXGWWenKai / NotoSansSC / JetBrainsMono）与 p5/p5.brush
-├── screenshots/                # 26 张 1080×1920 时代关键帧 + 14 张 1:1 局部工艺特写 + 20 时代总览拼图
+├── index.html          # 浏览器实时预览入口（空格播放、方向键快进、支持跳幕）
+├── render.html         # 无头 Chrome 逐帧确定性渲染页
+├── build_video.mjs     # 零依赖 CDP 并发渲染与 48kHz 音轨合成脚本
+├── assets/panels/      # 辅助肌理、精抠大笑序列帧、笑声采样与品牌标识
+├── public/             # 本地字体与 p5.js / p5.brush
+├── screenshots/        # 26 张竖屏剧照 + 14 张 1:1 局部特写 + 20 时代总览图
 └── src/
-    ├── main.js                 # 9:16 帧调度器 renderFilmFrame(t) 与超采样直出管线
-    ├── audio/engine.js         # 120BPM 20 时代程序化 Web Audio 编曲与离线母带导出器
-    ├── beat/                   # 137.0s 音乐时钟（1.50× 倍速 = 91.33s 成片）与竖屏摄影机轨迹
-    ├── kit/                    # 离屏烘焙缓存、画框物理过渡、全画幅环境生命力与 22 时代水印引擎
-    ├── rig/                    # 解析双骨 IK 骑行骨架与 WebGL 多媒介着色器奶蛙渲染器
-    └── scenes/                 # Intro + s01..s20 二十个艺术史时代场景 + Outro 3×7 实时展墙与发布会
+    ├── main.js         # 9:16 帧调度器与宋代山水 3× 超采样直出层
+    ├── audio/          # 120BPM 20 时代 Web Audio 合成器编曲
+    ├── beat/           # 时间轴与竖屏镜头运动曲线
+    ├── kit/            # 离屏烘焙缓存、画框过渡、环境动态与 22 款跨时代水印
+    ├── rig/            # 双骨 IK 骑行骨架与多媒介着色器
+    └── scenes/         # Intro + s01..s20 二十个年代场景 + Outro 展墙与发布会
 ```
 
 ---
 
-## 致谢与开源协议
+## 致谢与协议
 
-- 原版引擎与创意致敬：[**`orbitoo/pelican-test`（《鹈鹕测试》by Elbert）**](https://github.com/orbitoo/pelican-test)
-- 奶蛙 `9:16` 竖屏重制、全媒介风格化与工程精修：**EricChan (`@Nonstop` × `ERC`)**
-- 本仓库遵循 **[MIT License](./LICENSE)** 开源。
+- 原版创意与引擎底座来自 Elbert 的 [**`orbitoo/pelican-test`（《鹈鹕测试》）**](https://github.com/orbitoo/pelican-test)
+- 奶蛙 `9:16` 竖屏重制、20 年代画风适配与细节打磨：**EricChan (`@Nonstop` × `ERC`)** · [抖音](https://v.douyin.com/jFsSveywc4A) · [视频号](https://weixin.qq.com/sph/An74vZLV3b)
+- 代码采用 **[MIT License](./LICENSE)** 开源。
