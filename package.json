@@ -1,9 +1,14 @@
 {
-  "name": "nailong-test",
+  "name": "naiwa-test",
   "version": "1.0.0",
   "private": false,
   "type": "module",
-  "description": "《奶龙测试》（The Naiwa / Nailong Test）— 跨越人类 6,000 年 20 种艺术媒介的 9:16 纯代码生成骑行动画短片（p5.js + WebGL + p5.brush + Web Audio）",
+  "description": "《奶蛙测试》（The Naiwa Test）— 跨越人类 6,000 年 20 种艺术媒介的 9:16 纯代码生成骑行动画短片（p5.js + WebGL + p5.brush + Web Audio）",
+  "homepage": "https://github.com/ericchan916/naiwa-test",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ericchan916/naiwa-test.git"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=22.0.0"
@@ -20,7 +25,7 @@
     "procedural-animation",
     "web-audio",
     "art-history",
-    "nailong",
+    "naiwa",
     "pelican-test"
   ]
 }

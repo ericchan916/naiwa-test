@@ -1,4 +1,4 @@
-# 《奶龙测试》(`Nailong Test` / `奶蛙骑行测试`)
+# 《奶蛙测试》(`The Naiwa Test`)
 
 > **跨越人类 6,000 年、20 种艺术史媒介的 `9:16` 竖屏高清（`1080×1920 @ 30fps`）纯代码生成动画短片**  
 > 基于 [`orbitoo/pelican-test`](https://github.com/orbitoo/pelican-test)（MIT）美术馆级程序化卷轴与 Web Audio 引擎深度重制 · `@Nonstop × ERC` 出品
@@ -6,17 +6,22 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-amber.svg)](./LICENSE)
 [![Resolution](https://img.shields.io/badge/Resolution-1080x1920%20%289%3A16%29-38bdf8.svg)](#快速运行与离线渲染)
 [![Zero NPM Deps](https://img.shields.io/badge/Dependencies-Zero%20NPM-4ade80.svg)](#工程架构)
+[![微信视频号](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E8%A7%86%E9%A2%91%E5%8F%B7-%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B-07c160.svg)](https://weixin.qq.com/sph/An74vZLV3b)
+[![抖音 Douyin](https://img.shields.io/badge/%E6%8A%96%E9%9F%B3%20Douyin-%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B-fe2c55.svg)](https://v.douyin.com/jFsSveywc4A)
 
 ![20 个艺术史时代总览拼图](./screenshots/hero_20_eras_grid.png)
 
-> **高清成片下载**：完整的 `1080×1920`（`30fps`、`48kHz` 立体声混音、`91.33s`）成片 MP4 可直接前往仓库右侧 **[Releases (`v1.0.0`)](../../releases/latest)** 在线预览或下载。
+> **在线观看与高清原片下载**
+> - **微信视频号**：https://weixin.qq.com/sph/An74vZLV3b
+> - **抖音（Douyin）**：https://v.douyin.com/jFsSveywc4A
+> - **高清原片 MP4 下载**：完整的 `1080×1920`（`30fps`、`48kHz` 立体声混音、`91.33s`）成片可直接前往仓库右侧 **[Releases (`v1.0.0`)](../../releases/latest)** 下载。
 
 ---
 
 ## 项目亮点
 
-1. **主角全媒介原生重绘（`呆滞大肚版奶龙 / 奶蛙` + 解析双骨逆运动学骑行骨架）**
-   - 并非简单贴图替换，而是针对 20 个艺术时代各自采用对应的**物理媒介与笔触算法**重绘奶龙与单车：北宋范宽焦墨铁线折芦描与淡赭藤黄染绢、梵高《星月夜》`source-atop` 厚涂刮刀油彩肌理、蒙克《呐喊》抽象表现派干粉彩起伏条带与竖椭圆 `"O"` 形呐喊嘴、爪哇牛皮镂空皮影关节铆钉、1950s 示波器 P1 荧光绿电子束、红白机 8-bit 像素精灵以及 2020s 36 阶复数傅里叶本轮（`Σ c_k · e^{ikωθ}`）实时绘线。
+1. **主角全媒介原生重绘（`奶蛙` + 解析双骨逆运动学骑行骨架）**
+   - 并非简单贴图替换，而是针对 20 个艺术时代各自采用对应的**物理媒介与笔触算法**重绘奶蛙与单车：北宋范宽焦墨铁线折芦描与淡赭藤黄染绢、梵高《星月夜》`source-atop` 厚涂刮刀油彩肌理、蒙克《呐喊》抽象表现派干粉彩起伏条带与竖椭圆 `"O"` 形呐喊嘴、爪哇牛皮镂空皮影关节铆钉、1950s 示波器 P1 荧光绿电子束、红白机 8-bit 像素精灵以及 2020s 36 阶复数傅里叶本轮（`Σ c_k · e^{ikωθ}`）实时绘线。
 2. **全片背景持续物理动态 + `9:16` 竖屏长廊重构**
    - 将原版横屏重构为 `1080×1920` 竖屏博物馆长廊视口，并为全部 20 个时代注入连续环境动态（北宋 `3000×3000` `3×` 超采样山谷推镜、清明上河图虹桥车马汴河波光、浮世绘飞沫、星空漩涡流场、VHS 磁带抖动与竖屏短视频实时跟拍弹幕）。
 3. **片尾 `3×7` 博物馆展墙 20 幅画作实时骑行 + 第 21 格「捧腹大笑」发布会**
@@ -126,5 +131,5 @@ node build_video.mjs --render
 ## 致谢与开源协议
 
 - 原版引擎与创意致敬：[**`orbitoo/pelican-test`（《鹈鹕测试》by Elbert）**](https://github.com/orbitoo/pelican-test)
-- 奶龙 `9:16` 竖屏重制、全媒介风格化与工程精修：**EricChan (`@Nonstop` × `ERC`)**
+- 奶蛙 `9:16` 竖屏重制、全媒介风格化与工程精修：**EricChan (`@Nonstop` × `ERC`)**
 - 本仓库遵循 **[MIT License](./LICENSE)** 开源。
